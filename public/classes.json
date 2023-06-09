@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Football",
+      "instructor": "John Smith",
+      "availableSeats": 15,
+      "student": "123",
+      "price": "$50",
+      "image": "https://img.freepik.com/free-photo/soccer-players-action-professional-stadium_654080-1130.jpg?w=1060&t=st=1686309161~exp=1686309761~hmac=d6da081eab7a0784912072599e59ede68958b6b425355c97d4862f6106399cc0"
+    },
+    {
+      "name": "Cricket",
+      "instructor": "Sarah Johnson",
+      "availableSeats": 12,
+      "student": "120",
+      "price": "$60",
+      "image": "https://img.freepik.com/free-vector/hand-drawn-ipl-cricket-illustration_23-2149213601.jpg?w=996&t=st=1686309227~exp=1686309827~hmac=b0f5173dd51b0073725464ec69bc0f4de4c58c45d6d1b75091c44a9bb93fdbdd"
+    },
+    {
+      "name": "Hockey",
+      "instructor": "David Thompson",
+      "availableSeats": 10,
+      "student": "103",
+      "price": "$55",
+      "image": "https://img.freepik.com/free-photo/field-hockey-player-training-practicing-sport-grass_23-2149668540.jpg?w=996&t=st=1686309284~exp=1686309884~hmac=b41c41b0f65b22735bbafbd561d592a810e90dcea16825ad003a7d7b76701d7c"
+    },
+    {
+      "name": "Chess",
+      "instructor": "Alexandra Davis",
+      "availableSeats": 8,
+      "student": "100",
+      "price": "$40",
+      "image": "https://img.freepik.com/free-photo/hand-playing-chess-classic-board_23-2150314867.jpg?w=996&t=st=1686309352~exp=1686309952~hmac=3cea2795b0b9ce409900b604795d70f7a0781658ab6a517d56117c4a5ae4857f"
+    },
+    {
+      "name": "Basketball",
+      "instructor": "Michael Anderson",
+      "availableSeats": 10,
+      "student": "116",
+      "price": "$45",
+      "image": "https://img.freepik.com/free-photo/black-professional-black-basketball-player-action-basketball-court_613910-553.jpg?w=1060&t=st=1686309401~exp=1686310001~hmac=ea3a163c9be5f62eb56f0d1f923ded92a8e6139c4c167a23919eac4ef781dc1c"
+    },
+    {
+      "name": "Swimming",
+      "instructor": "Emily Wilson",
+      "availableSeats": 20,
+      "student": "119",
+      "price": "$70",
+      "image": "https://img.freepik.com/free-photo/cute-retriever-puppy-wearing-sunglasses-outdoors-summer-generative-ai_188544-12617.jpg?w=1060&t=st=1686309499~exp=1686310099~hmac=7c278f766f62146c97ef38d7d7170012a955661e34a5622693ad16f9a2c1bc9e"
+    }
+  ]
+  
