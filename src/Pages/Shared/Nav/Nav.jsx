@@ -1,14 +1,14 @@
+import { Link } from 'react-router-dom';
 import img from './../../../assets/Course/avatar.jpg'
 import logo from './../../../assets/Course/logo.png'
 
 const Nav = () => {
 
     const navLink = <>
-        <li><a>Item 1</a></li>
-        <li>
-            <a>Ttem 2</a>
-        </li>
-        <li><a>Item 3</a></li>
+        <li><a>Home</a></li>
+        <li><a>Instructors</a></li>
+        <li><a>Classes</a></li>
+        <li><a>Dashboard</a></li>
     </>
 
     return (
@@ -30,7 +30,8 @@ const Nav = () => {
                         {navLink}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end ">
+                <Link to='/login' className='menu'>Login</Link>
                     <img className='w-[50px] rounded-full' src={img} alt="" />
                 </div>
             </div>
