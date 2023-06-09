@@ -1,18 +1,20 @@
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const Login = () => {
 
-    const captcharef = useRef()
-
     const [disabled, setDisabled] = useState(true);
+
+    const {singIn} = useContext(AuthContext);
 
     useEffect(()=>{
         loadCaptchaEnginge(6);
     },[])
 
-    const handelCaptcha = () =>{
-        const captcha = captcharef.current.value;
+    const handelCaptcha = (e) =>{
+        const captcha = e.target.value;
         console.log(captcha);
         if (validateCaptcha(captcha)==true) {
             setDisabled(false)
@@ -28,6 +30,12 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+        singIn(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            form.reset()
+        })
     }
 
     return (
@@ -58,12 +66,12 @@ const Login = () => {
                             <label className="label">
                                 <LoadCanvasTemplate />
                             </label>
-                            <input type="name" ref={captcharef} name="captcha" placeholder="Fill the captcha" className="input input-bordered" />
-                            <button onClick={handelCaptcha} className='btn-xs btn-outline mt-2'>Validate</button>
+                            <input type="name" onBlur={handelCaptcha} name="captcha" placeholder="Fill the captcha" className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
                             <input disabled={disabled} className="btn btn-success" type="submit" value="Login" />
                         </div>
+                        <div><span>New to Spoetopia? please <Link to='/singup' className='text-green-500'>SingUp</Link></span></div>
                     </form>
                 </div>
             </div>

@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom';
 import img from './../../../assets/Course/avatar.jpg'
 import logo from './../../../assets/Course/logo.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Nav = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handelLogOut = ()  =>{
+        logOut();
+    }
 
     const navLink = <>
         <li><a>Home</a></li>
@@ -31,7 +39,13 @@ const Nav = () => {
                     </ul>
                 </div>
                 <div className="navbar-end ">
-                <Link to='/login' className='menu'>Login</Link>
+                    {
+                        user ? <>
+                        <Link onClick={handelLogOut} className='menu'>Logout</Link>
+                        </> : <>
+                      <Link to='/login' className='menu'>Login</Link>
+                        </>
+                    }
                     <img className='w-[50px] rounded-full' src={img} alt="" />
                 </div>
             </div>

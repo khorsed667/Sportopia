@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC1kFvUfG2xYAdsOOZUZcvZ1JElHLEgaFs",
-  authDomain: "sportopia-8286a.firebaseapp.com",
-  projectId: "sportopia-8286a",
-  storageBucket: "sportopia-8286a.appspot.com",
-  messagingSenderId: "1052655681174",
-  appId: "1:1052655681174:web:dbc418c60fbbeb58280cb7"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
