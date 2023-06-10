@@ -1,14 +1,21 @@
 
 
-const ClassCard = () => {
+const ClassCard = ({ cls }) => {
+
+    const { image, name, instructorName, availableSeats, price } = cls
+
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+            <figure><img src={image} className="h-[200px] w-full" alt="class" /></figure>
+            <div className="card-body relative">
+                <div>
+                    <h2 className="card-title">{name}</h2>
+                    <p>Instractor Name: {instructorName}</p>
+                    <p>Available seats: {availableSeats}</p>
+                    <p>Price: ${price}</p>
+                </div>
+                <div className="card-actions absolute top-24 left-72 justify-end">
+                    <button className="btn  bg-green-700 text-white">Enroll</button>
                 </div>
             </div>
         </div>

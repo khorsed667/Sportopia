@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Heading from "../Components/Heading/Heading";
+import ClassCard from "./ClassCard";
 
 
 const Classes = () => {
@@ -12,7 +14,18 @@ const Classes = () => {
 
     return (
         <div>
-            <p>total number of class: {classe.length}</p>
+            <Heading
+            subHeading='To unleash your inner champoin'
+            headings='Choose your class'
+            ></Heading>
+            <div className="grid md:grid-cols-3 gap-4">
+                {
+                    classe.map((cls,index) => <ClassCard
+                    key={index}
+                    cls={cls}
+                    ></ClassCard>)
+                }
+            </div>
         </div>
     );
 };
