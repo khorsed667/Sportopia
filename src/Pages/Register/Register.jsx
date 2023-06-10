@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../Providers/AuthProviders";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Register = () => {
 
-    const {singUp} = useContext(AuthContext)
+    const nevigate = useNavigate();
+    const {singUp, updateUserProfile} = useContext(AuthContext)
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const onSubmit = data => {
@@ -15,7 +16,16 @@ const Register = () => {
     .then(result =>{
         const loggedUser = result.user;
         console.log(loggedUser);
-        reset();
+        updateUserProfile(data.name, data.photoURL)
+        .then(()=>{
+            console.log('User profile Updated Successfully');
+            reset();
+            nevigate('/');
+            //TODO: Implement sweet alert!
+        })
+        .catch(err=>{
+            console.log(err);
+        })
     })
   };
 
@@ -33,14 +43,21 @@ const Register = () => {
                                 <span className="label-text">Name</span>
                             </label>
                             <input type="name" {...register("name", { required: true })} name="name" placeholder="name" className="input input-bordered" />
-                            {errors.name && <span>This field is required!</span>}
+                            {errors.name && <span>Name is required!</span>}
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo</span>
+                            </label>
+                            <input type="photo" {...register("photo", { required: true })} placeholder="photo" className="input input-bordered" />
+                            {errors.photo && <span>Photo Url is required!</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
                             <input type="email" {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered" />
-                            {errors.email && <span>This field is required!</span>}
+                            {errors.email && <span>Email is required!</span>}
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -57,12 +74,6 @@ const Register = () => {
                                 <span className="label-text">Confirm Password</span>
                             </label>
                             <input type="password" name="confirmPassword" placeholder="retype password" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Photo Url</span>
-                            </label>
-                            <input type="file" name="url" />
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-success" type="submit" value="SingUp" />

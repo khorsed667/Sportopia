@@ -40,6 +40,7 @@ const Login = () => {
             const loggedUser = result.user;
             console.log(loggedUser);
             form.reset();
+            //TODO: Implement sweet alert!
             navigate(from, { replace: true });
         })
     }
