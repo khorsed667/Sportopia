@@ -13,10 +13,10 @@ const Nav = () => {
     }
 
     const navLink = <>
-        <li><a>Home</a></li>
-        <li><a>Instructors</a></li>
-        <li><a>Classes</a></li>
-        <li><a>Dashboard</a></li>
+        <Link className='mx-4' to='/'>Home</Link>
+        <Link className='mx-4' to='instructors'>Instructors</Link>
+        <Link className='mx-4' to='/classes'>Classes</Link>
+        <Link className='mx-4' to='/deshbord'>Deshbord</Link>
     </>
 
     return (
@@ -46,7 +46,7 @@ const Nav = () => {
                       <Link to='/login' className='menu'>Login</Link>
                         </>
                     }
-                    <img className='w-[50px] rounded-full' src={img} alt="" />
+                    <img className='w-[40px] rounded-full' src={img} alt="" />
                 </div>
             </div>
         </div>

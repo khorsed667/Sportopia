@@ -1,0 +1,123 @@
+[
+    {
+      "image": "https://img.freepik.com/free-photo/african-american-teenage-boy-tying-his-shoe-laces-basketball-court_53876-30661.jpg?w=996&t=st=1686392642~exp=1686393242~hmac=05168380c70d1d6ef7de631462c09b7ba71b4f3c2e92f7facbbde53568437363",
+      "name": "Basketball Training",
+      "instructorName": "Jony Dop",
+      "instructorEmail": "jony@gmail.com",
+      "availableSeats": 15,
+      "price": 50
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/coach-teaching-kid-indoor-swimming-pool-how-swim-dive-swimming-lesson-kids-development_1157-49330.jpg?w=996&t=st=1686392689~exp=1686393289~hmac=d2f4be893c5e7fc3a094f9e62cdb34adf36a6be4417fc293a8a872fc73a5ff9a",
+      "name": "Swimming Lessons",
+      "instructorName": "Jony Dop",
+      "instructorEmail": "jony@gmail.com",
+      "availableSeats": 10,
+      "price": 40
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/soccer-player-action-stadium_1150-14598.jpg?w=996&t=st=1686392733~exp=1686393333~hmac=c08abfb89806610cdba1ad027629f23256f9ff7a11ec6567e11f3aac18549a11",
+      "name": "Soccer Camp",
+      "instructorName": "Jony Dop",
+      "instructorEmail": "jony@gmail.com",
+      "availableSeats": 20,
+      "price": 60
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/man-playing-padel_657883-621.jpg?w=996&t=st=1686392791~exp=1686393391~hmac=da1871bc9fce516c006c67398e39c19434bff59d802117408ccf010cc4cb61b6",
+      "name": "Tennis Workshop",
+      "instructorName": "Jony Dop",
+      "instructorEmail": "jony@gmail.com",
+      "availableSeats": 8,
+      "price": 75
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/group-people-coming-together-outdoor-yoga_1262-20178.jpg?w=996&t=st=1686392832~exp=1686393432~hmac=83f568276e4614bb5c0e18dab09db98812847880db14869d646f1a781f8fdff3",
+      "name": "Yoga Retreat",
+      "instructorName": "Jony Dop",
+      "instructorEmail": "jony@gmail.com",
+      "availableSeats": 12,
+      "price": 55
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/back-view-male-golfer-swinging-golf-club_171337-6508.jpg?w=996&t=st=1686392882~exp=1686393482~hmac=301ae46a233bcc05bbaf7556dd10340cb4d054baa81f1e639d39b60aef45cb8a",
+      "name": "Golf Clinic",
+      "instructorName": "Harry Margen",
+      "instructorEmail": "harry@gmail.com",
+      "availableSeats": 6,
+      "price": 90
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/asian-people-dancing-together_1098-22132.jpg?w=996&t=st=1686392917~exp=1686393517~hmac=e124f1a801bdcc8451b609e6f517925cae88f751492b54f6cb2e5acae47fe086",
+      "name": "Dance Choreography",
+      "instructorName": "Harry Margen",
+      "instructorEmail": "harry@gmail.com",
+      "availableSeats": 15,
+      "price": 45
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/people-practicing-tai-chi-side-view_23-2149960110.jpg?w=996&t=st=1686392954~exp=1686393554~hmac=e43abfb6df9b62cc33fb91812f793c0c37e01d84819166b13e90ffa176464b9e",
+      "name": "Martial Arts Workshop",
+      "instructorName": "Harry Margen",
+      "instructorEmail": "harry@gmail.com",
+      "availableSeats": 10,
+      "price": 70
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/close-up-picture-artist-mixing-paints-palette_259150-60621.jpg?w=996&t=st=1686393001~exp=1686393601~hmac=06924a855c964a81d783858564735c95a6fc24a2dade68ab4641a22404b5509f",
+      "name": "Art Painting Class",
+      "instructorName": "Harry Margen",
+      "instructorEmail": "harry@gmail.com",
+      "availableSeats": 8,
+      "price": 65
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/young-man-looking-beautiful-woman-playing-piano_23-2148047542.jpg?w=996&t=st=1686393042~exp=1686393642~hmac=183cd88d921d1a8a3f6bd2ba53dcf3d2a46168072680263c9b6790bbd988a40f",
+      "name": "Music Theory Course",
+      "instructorName": "Harry Margen",
+      "instructorEmail": "harry@gmail.com",
+      "availableSeats": 20,
+      "price": 30
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/way-success_1098-15193.jpg?w=996&t=st=1686393086~exp=1686393686~hmac=ade708a40d1560cf925175eac3dbd8529c066217827ddb341311486f70e38271",
+      "name": "Fitness Bootcamp",
+      "instructorName": "Natasha",
+      "instructorEmail": "nata@gmail.com",
+      "availableSeats": 15,
+      "price": 50
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/lifestyle-people-learning-make-sushi_23-2149865317.jpg?w=996&t=st=1686393141~exp=1686393741~hmac=7bc1841b3f7dcccc0764a0dabfdee2bd075f5f3aa3d61f7f1121fe7dee6b355f",
+      "name": "Cooking Masterclass",
+      "instructorName": "Natasha",
+      "instructorEmail": "nata@gmail.com",
+      "availableSeats": 12,
+      "price": 55
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?w=996&t=st=1686393197~exp=1686393797~hmac=cdc2087e3f8ec6424f28952facb02a97ae7dafe7654ce55d52c6c819a69d8592",
+      "name": "Coding Workshop",
+      "instructorName": "Natasha",
+      "instructorEmail": "nata@gmail.com",
+      "availableSeats": 10,
+      "price": 60
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/female-tourists-take-pictures_1150-5735.jpg?w=996&t=st=1686393251~exp=1686393851~hmac=621bb502374cfa2f195d17d6b81229a37c1090b40bf6a2e8165e6fb8dfa75f62",
+      "name": "Photography Tour",
+      "instructorName": "Natasha",
+      "instructorEmail": "nata@gmail.com",
+      "availableSeats": 10,
+      "price": 80
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/different-language-speech-bubble-hello-concept_53876-125051.jpg?w=996&t=st=1686393303~exp=1686393903~hmac=2693ca62b2c2e210f20557b90399fbbe6e2764245613bb6d134385253ecb0b15",
+      "name": "Language Exchange",
+      "instructorName": "Natasha",
+      "instructorEmail": "nata@gmail.com",
+      "availableSeats": 15,
+      "price": 40
+    }
+  ]
+  

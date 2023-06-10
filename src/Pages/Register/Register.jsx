@@ -62,7 +62,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Photo Url</span>
                             </label>
-                            <input type="url" name="url" />
+                            <input type="file" name="url" />
                         </div>
                         <div className="form-control mt-6">
                             <input className="btn btn-success" type="submit" value="SingUp" />

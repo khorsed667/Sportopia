@@ -1,0 +1,71 @@
+[
+    {
+      "image": "instructor1.jpg",
+      "name": "John Smith",
+      "email": "johnsmith@example.com",
+      "classesTaken": 5,
+      "classNames": ["Basketball", "Soccer", "Tennis"]
+    },
+    {
+      "image": "instructor2.jpg",
+      "name": "Emily Johnson",
+      "email": "emilyjohnson@example.com",
+      "classesTaken": 3,
+      "classNames": ["Swimming", "Volleyball"]
+    },
+    {
+      "image": "instructor3.jpg",
+      "name": "Michael Davis",
+      "email": "michaeldavis@example.com",
+      "classesTaken": 4,
+      "classNames": ["Football", "Baseball", "Badminton"]
+    },
+    {
+      "image": "instructor4.jpg",
+      "name": "Sarah Wilson",
+      "email": "sarahwilson@example.com",
+      "classesTaken": 2,
+      "classNames": ["Gymnastics", "Martial Arts"]
+    },
+    {
+      "image": "instructor5.jpg",
+      "name": "David Thompson",
+      "email": "davidthompson@example.com"
+    },
+    {
+      "image": "instructor6.jpg",
+      "name": "Jennifer Lee",
+      "email": "jenniferlee@example.com",
+      "classesTaken": 1,
+      "classNames": ["Yoga"]
+    },
+    {
+      "image": "instructor7.jpg",
+      "name": "Robert Garcia",
+      "email": "robertgarcia@example.com",
+      "classesTaken": 6,
+      "classNames": ["Swimming", "Basketball", "Tennis", "Soccer"]
+    },
+    {
+      "image": "instructor8.jpg",
+      "name": "Emma Thompson",
+      "email": "emmathompson@example.com",
+      "classesTaken": 3,
+      "classNames": ["Volleyball", "Badminton"]
+    },
+    {
+      "image": "instructor9.jpg",
+      "name": "Christopher Wright",
+      "email": "christopherwright@example.com",
+      "classesTaken": 4,
+      "classNames": ["Football", "Baseball", "Martial Arts"]
+    },
+    {
+      "image": "instructor10.jpg",
+      "name": "Olivia Moore",
+      "email": "oliviamoore@example.com",
+      "classesTaken": 2,
+      "classNames": ["Gymnastics", "Yoga"]
+    }
+  ]
+  
