@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import Swal from "sweetalert2";
 
 
 const AllUsers = () => {
@@ -7,6 +8,44 @@ const AllUsers = () => {
         const res = await fetch('http://localhost:5000/user')
         return res.json();
     })
+
+    const handelAdmin = (usr) => {
+        fetch(`http://localhost:5000/user/admin/${usr._id}`, {
+            method: 'PATCH'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    refetch();
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `${usr.name} is admin now`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
+    }
+
+    const handelInstractor = (usr) => {
+        fetch(`http://localhost:5000/user/instractor/${usr._id}`, {
+            method: 'PATCH'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    refetch();
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `${usr.name} is Instractor now`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
+    }
 
     return (
         <div className="w-full">
@@ -19,25 +58,27 @@ const AllUsers = () => {
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Role</th>
+                            <th>Role 1</th>
+                            <th>Role 2</th>
                         </tr>
                     </thead>
                     <tbody>
                         {/* row 1 */}
                         {
                             user.map((usr, index) => <tr
-                            key={usr._id}
+                                key={usr._id}
                             >
                                 <th>{index + 1}</th>
                                 <td>{usr.name}</td>
                                 <td>{usr.email}</td>
-                                <td>Admin</td>
+                                <td onClick={() => handelAdmin(usr)}>{usr.role === 'admin' ? 'Admin' : <button className="btn btn-outline btn-success">Admin</button>}</td>
+                                <td onClick={() => handelInstractor(usr)}>{usr.role === 'instractor' ? 'Instractor' : <button className="btn btn-outline btn-success">Instractor</button>}</td>
                             </tr>)
                         }
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div >
     );
 };
 
