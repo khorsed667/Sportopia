@@ -2,32 +2,51 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../Providers/AuthProviders";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
 
     const nevigate = useNavigate();
-    const {singUp, updateUserProfile} = useContext(AuthContext)
+    const { singUp, updateUserProfile } = useContext(AuthContext)
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-  const onSubmit = data => {
-    console.log(data)
-    singUp(data.email, data.password)
-    .then(result =>{
-        const loggedUser = result.user;
-        console.log(loggedUser);
-        updateUserProfile(data.name, data.photoURL)
-        .then(()=>{
-            console.log('User profile Updated Successfully');
-            reset();
-            nevigate('/');
-            //TODO: Implement sweet alert!
-        })
-        .catch(err=>{
-            console.log(err);
-        })
-    })
-  };
+    const onSubmit = data => {
+        singUp(data.email, data.password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                updateUserProfile(data.name, data.photoURL)
+                    .then(()=>{
+                        console.log('User profile Updated Successfully');
+                        const userInfo = {name:data.name, email:data.email}
+                        fetch('http://localhost:5000/user',{
+                            method: 'POST',
+                            headers:{
+                                'content-type':'application/json'
+                            },
+                            body:JSON.stringify(userInfo)
+                        })
+                        .then(res => res.json())
+                        .then(data =>{
+                            if(data.insertedId){
+                                reset();
+                                nevigate('/');
+                                //TODO: Implement sweet alert!
+                                Swal.fire(
+                                    'Success!',
+                                    'Welcome to Soprtofia.',
+                                    'success'
+                                )
+                            }
+                        })
+
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+            })
+    };
 
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -37,7 +56,7 @@ const Register = () => {
                     <p className="py-6">Welcome to our vibrant summer school website, where a world of thrilling sports awaits! Join us and embark on an exhilarating journey of athletic exploration and unforgettable summer memories.</p>
                 </div>
                 <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100">
-                    <form  onSubmit={handleSubmit(onSubmit)} className="card-body">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -63,7 +82,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" {...register("password", { required: true, minLength: 6 , maxLength: 20, pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/ })} name="password" placeholder="password" className="input input-bordered" />
+                            <input type="password" {...register("password", { required: true, minLength: 6, maxLength: 20, pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/ })} name="password" placeholder="password" className="input input-bordered" />
                             {errors.password?.type === 'minLength' && <p className="text-red-500" role="alert">Need to be atleast 6 character!</p>}
                             {errors.password?.type === 'maxLength' && <p className="text-red-500" role="alert">Not more than 20 character!</p>}
                             {errors.password?.type === 'required' && <p className="text-red-500" role="alert">password firld is mist required!</p>}

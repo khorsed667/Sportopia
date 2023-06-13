@@ -8,6 +8,7 @@ import Register from "../Register/Register";
 import Classes from "../Classes/Classes";
 import MyClass from "../DashBoard/MyClass/MyClass";
 import Dashing from "../LayOut/Dashing/Dashing";
+import PrivateRoutes from "./PrivateRoutes";
 
 
   export const router = createBrowserRouter([
@@ -35,7 +36,7 @@ import Dashing from "../LayOut/Dashing/Dashing";
     },
     {
       path:'dashboard',
-      element:<Dashing></Dashing>,
+      element:<PrivateRoutes><Dashing></Dashing></PrivateRoutes>,
       children:[
         {
           path:'selectedclass',
