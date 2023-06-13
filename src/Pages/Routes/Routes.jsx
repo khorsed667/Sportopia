@@ -10,6 +10,7 @@ import MyClass from "../DashBoard/MyClass/MyClass";
 import Dashing from "../LayOut/Dashing/Dashing";
 import PrivateRoutes from "./PrivateRoutes";
 import AllUsers from "../DashBoard/AllUsers/AllUsers";
+import AddClass from "../DashBoard/AddClass/AddClass";
 
 
   export const router = createBrowserRouter([
@@ -46,6 +47,10 @@ import AllUsers from "../DashBoard/AllUsers/AllUsers";
         {
           path: 'allusers',
           element:<AllUsers></AllUsers>
+        },
+        {
+          path: 'addclass',
+          element:<AddClass></AddClass>
         }
       ]
     }
