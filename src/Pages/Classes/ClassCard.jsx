@@ -2,13 +2,14 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import useClass from "../../hooks/useClass";
 
 
 const ClassCard = ({ cls }) => {
 
     const { image, name, instructorName, availableSeats, price, _id } = cls
 
-
+    const [, refetch] = useClass()
     const { user } = useContext(AuthContext);
     const nevigate = useNavigate();
 
@@ -27,6 +28,7 @@ const ClassCard = ({ cls }) => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.insertedId) {
+                        refetch();
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',

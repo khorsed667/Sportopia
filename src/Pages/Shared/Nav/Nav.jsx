@@ -3,10 +3,13 @@ import img from './../../../assets/Course/avatar.jpg'
 import logo from './../../../assets/Course/logo.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
+import useClass from '../../../hooks/useClass';
 
 const Nav = () => {
 
     const { user, logOut } = useContext(AuthContext);
+
+    const [carts] = useClass();
 
     const handelLogOut = ()  =>{
         logOut();
@@ -17,6 +20,7 @@ const Nav = () => {
         <Link className='mx-4' to='instructors'>Instructors</Link>
         <Link className='mx-4' to='/classes'>Classes</Link>
         <Link className='mx-4' to='/deshbord'>Deshbord</Link>
+        <Link >{carts?.length}</Link>
     </>
 
     return (

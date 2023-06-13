@@ -6,6 +6,7 @@ import Home from "../Home/Home/Home";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Classes from "../Classes/Classes";
+import DefaultBoard from "../DashBoard/DefaultBoard/DefaultBoard";
 
 
   export const router = createBrowserRouter([
@@ -31,4 +32,8 @@ import Classes from "../Classes/Classes";
         }
       ]
     },
+    {
+      path:'deshbord',
+      element:<DefaultBoard></DefaultBoard>
+    }
   ]);
