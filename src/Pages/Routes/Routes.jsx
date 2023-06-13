@@ -6,7 +6,8 @@ import Home from "../Home/Home/Home";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Classes from "../Classes/Classes";
-import DefaultBoard from "../DashBoard/DefaultBoard/DefaultBoard";
+import MyClass from "../DashBoard/MyClass/MyClass";
+import Dashing from "../LayOut/Dashing/Dashing";
 
 
   export const router = createBrowserRouter([
@@ -33,7 +34,13 @@ import DefaultBoard from "../DashBoard/DefaultBoard/DefaultBoard";
       ]
     },
     {
-      path:'deshbord',
-      element:<DefaultBoard></DefaultBoard>
+      path:'dashboard',
+      element:<Dashing></Dashing>,
+      children:[
+        {
+          path:'selectedclass',
+          element:<MyClass></MyClass>
+        }
+      ]
     }
   ]);

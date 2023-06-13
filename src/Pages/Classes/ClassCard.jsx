@@ -7,7 +7,7 @@ import useClass from "../../hooks/useClass";
 
 const ClassCard = ({ cls }) => {
 
-    const { image, name, instructorName, availableSeats, price, _id } = cls
+    const { image, name, instructorName, availableSeats, price } = cls
 
     const [, refetch] = useClass()
     const { user } = useContext(AuthContext);
@@ -17,8 +17,8 @@ const ClassCard = ({ cls }) => {
     const handleAddToCart = (cls) => {
         console.log(cls);
         if (user && user.email) {
-            const item = {clsId: _id, image, name, instructorName, availableSeats, price, usermail: user.email}
-            fetch('http://localhost:5000/carts',{
+            const item = {image, name, instructorName, availableSeats, price, usermail: user.email}
+            fetch('http://localhost:5000/cart',{
                 method: 'POST',
                 headers:{
                     'content-type' : 'application/json'
