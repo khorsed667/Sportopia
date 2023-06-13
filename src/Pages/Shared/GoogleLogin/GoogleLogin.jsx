@@ -5,20 +5,37 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const GoogleLogin = () => {
 
-    const {googleSingup} = useContext(AuthContext);
+    const { googleSingup } = useContext(AuthContext);
 
     const location = useLocation();
     const navigate = useNavigate();
-    
+
     const from = location.state?.from?.pathname || "/";
 
-    const handelLogin = () =>{
+    const handelLogin = () => {
         googleSingup()
-        .then(res => {
-            const loggedUser = res.user;
-            console.log(loggedUser);
-            navigate(from, { replace: true });
-        })
+            .then(res => {
+                const loggedUser = res.user;
+                console.log(loggedUser);
+
+
+                const userInfo = { name: loggedUser.displayName, email: loggedUser.email }
+                fetch('http://localhost:5000/user', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(userInfo)
+                })
+                    .then(res => res.json())
+                    .then(() => {
+                            //TODO: Implement sweet alert!
+                            navigate(from, { replace: true });
+                        })
+
+
+
+            })
     }
 
     return (
