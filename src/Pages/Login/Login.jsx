@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from '../Providers/AuthProviders';
+import GoogleLogin from '../Shared/GoogleLogin/GoogleLogin';
 
 const Login = () => {
 
@@ -81,6 +82,7 @@ const Login = () => {
                         </div>
                         <div><span>New to Spoetopia? please <Link to='/singup' className='text-green-500'>SingUp</Link></span></div>
                     </form>
+                    <GoogleLogin></GoogleLogin>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../Providers/AuthProviders";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import GoogleLogin from "../Shared/GoogleLogin/GoogleLogin";
 
 
 const Register = () => {
@@ -99,6 +100,7 @@ const Register = () => {
                         </div>
                         <div><span>Already have an account? please <Link to='/login' className='text-green-500'>login</Link></span></div>
                     </form>
+                    <GoogleLogin></GoogleLogin>
                 </div>
             </div>
         </div>
