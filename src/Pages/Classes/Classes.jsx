@@ -6,9 +6,8 @@ import ClassCard from "./ClassCard";
 const Classes = () => {
 
     const [classe, setClass] = useState([]);
-    console.log(classe);
 
-    fetch('allClasses.json')
+    fetch('http://localhost:5000/class')
     .then(res => res.json())
     .then(data => setClass(data))
 

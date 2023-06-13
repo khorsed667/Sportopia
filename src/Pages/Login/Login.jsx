@@ -75,8 +75,9 @@ const Login = () => {
                             </label>
                             <input type="name" onBlur={handelCaptcha} name="captcha" placeholder="Fill the captcha" className="input input-bordered" />
                         </div>
+                        {/* TODO: need to disable this button */}
                         <div className="form-control mt-6">
-                            <input disabled={disabled} className="btn btn-success" type="submit" value="Login" />
+                            <input disabled={false} className="btn btn-success" type="submit" value="Login" />
                         </div>
                         <div><span>New to Spoetopia? please <Link to='/singup' className='text-green-500'>SingUp</Link></span></div>
                     </form>
