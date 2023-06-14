@@ -17,7 +17,7 @@ const Nav = () => {
 
     const navLink = <>
         <Link className='mx-4' to='/'>Home</Link>
-        <Link className='mx-4' to='instructors'>Instructors</Link>
+        <Link className='mx-4' to='/instractor'>Instructors</Link>
         <Link className='mx-4' to='/classes'>Classes</Link>
         <Link className='mx-4' to='/dashboard'>Deshbord</Link>
     </>
