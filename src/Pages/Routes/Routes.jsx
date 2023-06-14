@@ -11,6 +11,7 @@ import Dashing from "../LayOut/Dashing/Dashing";
 import PrivateRoutes from "./PrivateRoutes";
 import AllUsers from "../DashBoard/AllUsers/AllUsers";
 import AddClass from "../DashBoard/AddClass/AddClass";
+import InstraClasses from "../DashBoard/InstraClasses/InstraClasses";
 
 
   export const router = createBrowserRouter([
@@ -51,6 +52,10 @@ import AddClass from "../DashBoard/AddClass/AddClass";
         {
           path: 'addclass',
           element:<AddClass></AddClass>
+        },
+        {
+          path: 'instraclass',
+          element:<InstraClasses></InstraClasses>
         }
       ]
     }

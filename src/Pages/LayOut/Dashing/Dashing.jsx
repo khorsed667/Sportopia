@@ -40,7 +40,7 @@ const Dashing = () => {
                                             <Link to="/dashboard/addclass">Add a Class</Link>
                                         </button>
                                         <button className="btn btn-outline my-2 bg-white">
-                                            <Link to="/dashboard/enrolledclass">My Classes</Link>
+                                            <Link to="/dashboard/instraclass">My Classes</Link>
                                         </button>
                                     </>
                                 ) : (
