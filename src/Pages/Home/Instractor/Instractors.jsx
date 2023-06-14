@@ -1,5 +1,3 @@
-
-import Heading from "../../Components/Heading/Heading";
 import { useState } from "react";
 import InstractorCard from "./InstractorCard";
 

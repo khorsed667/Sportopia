@@ -14,6 +14,7 @@ import AddClass from "../DashBoard/AddClass/AddClass";
 import InstraClasses from "../DashBoard/InstraClasses/InstraClasses";
 import AllClasses from "../DashBoard/AllClasses/AllClasses";
 import Instractor from "../Instractor/Instractor";
+import Error from "../Error";
 
 
   export const router = createBrowserRouter([
@@ -40,6 +41,10 @@ import Instractor from "../Instractor/Instractor";
         {
           path: 'instractor',
           element:<Instractor></Instractor>
+        },
+        {
+          path: '*',
+          element:<Error></Error>
         }
       ]
     },

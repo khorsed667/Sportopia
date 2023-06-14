@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Heading from "../Components/Heading/Heading";
 import ClassCard from "./ClassCard";
 
 
@@ -13,10 +12,7 @@ const Classes = () => {
 
     return (
         <div>
-            <Heading
-            subHeading='To unleash your inner champoin'
-            headings='Choose your class'
-            ></Heading>
+            <p className="text-center font-bold text-3xl my-5 text-green-400">To unlesh your inner champion <br /> Choose your classes</p>
             <div className="grid md:grid-cols-3 gap-4">
                 {
                     classe.map((cls,index) => <ClassCard

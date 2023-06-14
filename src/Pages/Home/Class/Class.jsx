@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Heading from "../../Components/Heading/Heading";
 import ClsCard from "./ClsCard";
 
 

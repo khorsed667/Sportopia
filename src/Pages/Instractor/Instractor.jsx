@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const Instractor = () => {
 
-    const { data: user = [], refetch } = useQuery(['user'], async () => {
+    const { data: user = [] } = useQuery(['user'], async () => {
         const res = await fetch('http://localhost:5000/user')
         return res.json();
     })
@@ -51,7 +51,7 @@ const Instractor = () => {
                                 </td>
                                 <td>{ins.email}</td>
                                 <th>
-                                    <button className="btn btn-outline btn-success">See Classes</button>
+                                    <button className="btn btn-ghost btn-xs">See Classes</button>
                                 </th>
                             </tr>)
                         }
