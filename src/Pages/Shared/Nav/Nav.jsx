@@ -20,7 +20,6 @@ const Nav = () => {
         <Link className='mx-4' to='instructors'>Instructors</Link>
         <Link className='mx-4' to='/classes'>Classes</Link>
         <Link className='mx-4' to='/dashboard'>Deshbord</Link>
-        <Link >{carts?.length}</Link>
     </>
 
     return (

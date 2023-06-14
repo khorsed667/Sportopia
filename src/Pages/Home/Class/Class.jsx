@@ -13,10 +13,7 @@ const Class = () => {
 
     return (
         <div className="my-5">
-            <Heading
-            subHeading='Unleash Learning Adventures'
-            headings='popular Summer classes'
-            ></Heading>
+            <p className="text-center font-bold text-3xl my-5 text-green-400">Explore Exciting Summer Sports Classes</p>
             
             <div className="grid md:grid-cols-3 sm:ms-5 gap-5">
                 {

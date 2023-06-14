@@ -26,7 +26,7 @@ const Dashing = () => {
                         isAdmin ? (
                             <>
                                 <button className="btn btn-outline my-2 bg-white">
-                                    <Link to="/dashboard/classes">Manage Classes</Link>
+                                    <Link to="/dashboard/adminClass">Manage Classes</Link>
                                 </button>
                                 <button className="btn btn-outline my-2 bg-white">
                                     <Link to="/dashboard/allusers">Manage Users</Link>

@@ -12,6 +12,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import AllUsers from "../DashBoard/AllUsers/AllUsers";
 import AddClass from "../DashBoard/AddClass/AddClass";
 import InstraClasses from "../DashBoard/InstraClasses/InstraClasses";
+import AllClasses from "../DashBoard/AllClasses/AllClasses";
 
 
   export const router = createBrowserRouter([
@@ -48,6 +49,10 @@ import InstraClasses from "../DashBoard/InstraClasses/InstraClasses";
         {
           path: 'allusers',
           element:<AllUsers></AllUsers>
+        },
+        {
+          path:'adminClass',
+          element: <AllClasses></AllClasses>
         },
         {
           path: 'addclass',
