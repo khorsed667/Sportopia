@@ -3,32 +3,39 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from '../Providers/AuthProviders';
 import GoogleLogin from '../Shared/GoogleLogin/GoogleLogin';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
 
+    const [showPassword, setPasswordVisibility] = useState(false)
     const [disabled, setDisabled] = useState(true);
 
-    const {singIn} = useContext(AuthContext);
+    const { singIn } = useContext(AuthContext);
 
     const location = useLocation();
     const navigate = useNavigate();
 
     const from = location.state?.from?.pathname || "/";
 
-    useEffect(()=>{
+    useEffect(() => {
         loadCaptchaEnginge(6);
-    },[])
+    }, [])
 
-    const handelCaptcha = (e) =>{
+    const handelCaptcha = (e) => {
         const captcha = e.target.value;
         console.log(captcha);
-        if (validateCaptcha(captcha)==true) {
+        if (validateCaptcha(captcha) == true) {
             setDisabled(false)
         }
-        else{
+        else {
             setDisabled(true)
         }
     }
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisibility(!showPassword)
+    }
+
 
     const handelLogin = event => {
         event.preventDefault();
@@ -37,13 +44,13 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
         singIn(email, password)
-        .then(result => {
-            const loggedUser = result.user;
-            console.log(loggedUser);
-            form.reset();
-            //TODO: Implement sweet alert!
-            navigate(from, { replace: true });
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                form.reset();
+                //TODO: Implement sweet alert!
+                navigate(from, { replace: true });
+            })
     }
 
     return (
@@ -61,11 +68,24 @@ const Login = () => {
                             </label>
                             <input type="email" name="email" placeholder="email" className="input input-bordered" />
                         </div>
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name="password" placeholder="password" className="input input-bordered" />
+                            <input type={showPassword ? 'text' : 'password'} name="password" placeholder="password" className="input input-bordered" />
+                            {
+                                showPassword ? (
+                                    <FaEyeSlash
+                                        onClick={togglePasswordVisibility}
+                                        className="absolute cursor-pointer text-green-600 top-[52px] left-[293px]"
+                                    />
+                                ) : (
+                                    <FaEye
+                                        onClick={togglePasswordVisibility}
+                                        className="absolute cursor-pointer text-green-600 top-[52px] left-[293px]"
+                                    />
+                                )
+                            }
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>

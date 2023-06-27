@@ -1,7 +1,7 @@
 
 import Banner from "../Banner/Banner";
 import Class from "../Class/Class";
-import Instractors from "../Instractor/Instractors";
+import InstraSweiper from "../InstaSwiper/InstraSweiper";
 import Motive from "../Motive/Motive";
 
 
@@ -10,7 +10,8 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Class></Class>
-            <Instractors></Instractors>
+            {/* <Instractors></Instractors> */}
+            <InstraSweiper></InstraSweiper>
             <Motive></Motive>
         </div>
     );

@@ -18,7 +18,7 @@ const ClassCard = ({ cls }) => {
         console.log(cls);
         if (user && user.email) {
             const item = {image, name, instructorName, availableSeats, price, usermail: user.email}
-            fetch('http://localhost:5000/cart',{
+            fetch('https://sportofia-server-khorsed667.vercel.app/cart',{
                 method: 'POST',
                 headers:{
                     'content-type' : 'application/json'

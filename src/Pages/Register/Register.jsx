@@ -21,7 +21,7 @@ const Register = () => {
                     .then(()=>{
                         console.log('User profile Updated Successfully');
                         const userInfo = {name:data.name, email:data.email}
-                        fetch('http://localhost:5000/user',{
+                        fetch('https://sportofia-server-khorsed667.vercel.app/user',{
                             method: 'POST',
                             headers:{
                                 'content-type':'application/json'

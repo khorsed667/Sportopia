@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ClsCard from "./ClsCard";
+import Title from "../../Components/Title/Title";
 
 
 const Class = () => {
@@ -12,8 +13,10 @@ const Class = () => {
 
     return (
         <div className="my-5">
-            <p className="text-center font-bold text-3xl my-5 text-green-400">Explore Exciting Summer Sports Classes</p>
-            
+            <Title
+            heading={'Summer Classes'}
+            subHeading={'Blast your inner champ with'}
+            ></Title>
             <div className="grid md:grid-cols-3 sm:ms-5 gap-5">
                 {
                     classes.map((cls, index) => <ClsCard

@@ -4,7 +4,7 @@ const usebookedClass = () =>{
     const {data : classes = [], isLoading: loading} = useQuery({
         queryKey: ['class'],
         queryFn: async () =>{
-            const res = await fetch('http://localhost:5000/class');
+            const res = await fetch('https://sportofia-server-khorsed667.vercel.app/class');
             return res.json();
         }
     })

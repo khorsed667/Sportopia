@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 const Instractor = () => {
 
     const { data: user = [] } = useQuery(['user'], async () => {
-        const res = await fetch('http://localhost:5000/user')
+        const res = await fetch('https://sportofia-server-khorsed667.vercel.app/user')
         return res.json();
     })
 

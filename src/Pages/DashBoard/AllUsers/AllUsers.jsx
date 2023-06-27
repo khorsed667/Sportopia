@@ -5,12 +5,12 @@ import Swal from "sweetalert2";
 const AllUsers = () => {
 
     const { data: user = [], refetch } = useQuery(['user'], async () => {
-        const res = await fetch('http://localhost:5000/user')
+        const res = await fetch('https://sportofia-server-khorsed667.vercel.app/user')
         return res.json();
     })
 
     const handelAdmin = (usr) => {
-        fetch(`http://localhost:5000/user/admin/${usr._id}`, {
+        fetch(`https://sportofia-server-khorsed667.vercel.app/user/admin/${usr._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -29,7 +29,7 @@ const AllUsers = () => {
     }
 
     const handelInstractor = (usr) => {
-        fetch(`http://localhost:5000/user/instractor/${usr._id}`, {
+        fetch(`https://sportofia-server-khorsed667.vercel.app/user/instractor/${usr._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

@@ -9,7 +9,7 @@ const useAxiousSecure = () => {
     const nevigate = useNavigate();
 
     const axiosSecure = axios.create({
-        baseURL: 'http://localhost:5000',
+        baseURL: 'https://sportofia-server-khorsed667.vercel.app',
     })
 
     useEffect(()=>{

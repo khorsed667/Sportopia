@@ -1,4 +1,5 @@
 import usebookedClass from "../../../hooks/usebookedClass";
+import Title from "../../Components/Title/Title";
 
 
 const AllClasses = () => {
@@ -7,7 +8,10 @@ const AllClasses = () => {
 
     return (
         <div className="w-full">
-            <p>class is loading</p>
+            <Title
+            subHeading={'Your instactor total added'}
+            heading={`${classes.length} classes`}
+            ></Title>
             <div className="overflow-x-auto">
                 <table className="table mx-4">
                     {/* head */}

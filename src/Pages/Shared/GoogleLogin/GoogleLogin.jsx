@@ -20,7 +20,7 @@ const GoogleLogin = () => {
 
 
                 const userInfo = { name: loggedUser.displayName, email: loggedUser.email }
-                fetch('http://localhost:5000/user', {
+                fetch('https://sportofia-server-khorsed667.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

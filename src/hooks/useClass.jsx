@@ -17,7 +17,7 @@ const useClass = () => {
             return res.data;
         }
         // queryFn: async () =>{
-        //     const res = await fetch(`http://localhost:5000/cart?email=${user?.email}`,{
+        //     const res = await fetch(`https://sportofia-server-khorsed667.vercel.app/cart?email=${user?.email}`,{
         //         headers: {
         //             authorization: `bearer ${token}`
         //         }
