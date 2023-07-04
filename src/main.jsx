@@ -13,7 +13,7 @@ const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="max-w-screen-xl mx-auto">
+    <div className="">
       <QueryClientProvider client={queryClient}>
         <AuthProviders>
           <RouterProvider router={router} />
