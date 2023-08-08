@@ -3,7 +3,7 @@ const Motive = () => {
     <div>
       <div>
         <p className="text-center my-5 text-5xl font-semibold">Why We...?</p>
-        <p className="lg:w-4/12 text-center mx-auto xsm:mx-2">
+        <p className="lg:w-4/12 text-center md:mx-auto xsm:mx-2">
           Discover the Exciting Features That Make Our Summer Sports Experience
           Unforgettable
         </p>

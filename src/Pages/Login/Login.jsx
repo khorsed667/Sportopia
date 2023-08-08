@@ -4,6 +4,7 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-s
 import { AuthContext } from '../Providers/AuthProviders';
 import GoogleLogin from '../Shared/GoogleLogin/GoogleLogin';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -48,8 +49,12 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 form.reset();
-                //TODO: Implement sweet alert!
                 navigate(from, { replace: true });
+                Swal.fire(
+                    'Success!',
+                    'Welcome to Soprtofia.',
+                    'success'
+                )
             })
     }
 

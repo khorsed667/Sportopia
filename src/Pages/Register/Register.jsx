@@ -33,7 +33,6 @@ const Register = () => {
                             if(data.insertedId){
                                 reset();
                                 nevigate('/');
-                                //TODO: Implement sweet alert!
                                 Swal.fire(
                                     'Success!',
                                     'Welcome to Soprtofia.',
