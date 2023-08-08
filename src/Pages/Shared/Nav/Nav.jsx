@@ -13,16 +13,16 @@ const Nav = () => {
 
   const navLink = (
     <>
-      <Link className="mx-4" to="/">
+      <Link className="m-4" to="/">
         Home
       </Link>
-      <Link className="mx-4" to="/instractor">
+      <Link className="m-4" to="/instractor">
         Instructors
       </Link>
-      <Link className="mx-4" to="/classes">
+      <Link className="m-4" to="/classes">
         Classes
       </Link>
-      <Link className="mx-4" to="/dashboard">
+      <Link className="m-4" to="/dashboard">
         Deshbord
       </Link>
     </>

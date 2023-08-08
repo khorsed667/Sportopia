@@ -17,7 +17,7 @@ const Classes = () => {
             subHeading={'To unlesh your inner champion'}
             heading={'Choose your classes'}
             ></Title>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid xsm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-2">
                 {
                     classe.map((cls,index) => <ClassCard
                     key={index}

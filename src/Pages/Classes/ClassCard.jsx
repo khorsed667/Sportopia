@@ -56,7 +56,7 @@ const ClassCard = ({ cls }) => {
     }
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-full bg-base-100 shadow-xl">
             <figure><img src={image} className="h-[200px] w-full" alt="class" /></figure>
             <div className="card-body relative">
                 <div>
@@ -64,10 +64,11 @@ const ClassCard = ({ cls }) => {
                     <p>Instractor Name: {instructorName}</p>
                     <p>Available seats: {availableSeats}</p>
                     <p>Price: ${price}</p>
+                    <button onClick={() => handleAddToCart(cls)} className="btn xsm:block lg:none bg-green-700 text-white">Select</button>
                 </div>
-                <div className="card-actions absolute top-24 left-72 justify-end">
-                    <button onClick={() => handleAddToCart(cls)} className="btn  bg-green-700 text-white">Select</button>
-                </div>
+                {/* <div className="card-actions absolute lg:top-24 lg:left-72 justify-end">
+                    <button onClick={() => handleAddToCart(cls)} className="btn xsm:none lg:block bg-green-700 text-white">Select</button>
+                </div> */}
             </div>
         </div>
     );
