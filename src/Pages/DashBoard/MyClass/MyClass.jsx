@@ -50,6 +50,7 @@ const MyClass = () => {
                             </th>
                             <th>Class</th>
                             <th>Name</th>
+                            <th>Price</th>
                             <th>Payment</th>
                             <th>Action</th>
                         </tr>
@@ -78,7 +79,10 @@ const MyClass = () => {
                                     {crt.name}
                                 </td>
                                 <td>
-                                    <button className="btn bg-green-300">Pay</button>
+                                    <p>$ {crt.price}</p>
+                                </td>
+                                <td>
+                                    <button className="btn bg-green-300">Add to Cart</button>
                                 </td>
                                 <th>
                                     <button onClick={() => handelDelete(crt)} className="btn bg bg-red-300">Delete</button>

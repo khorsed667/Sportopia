@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
 
-    const [showPassword, setPasswordVisibility] = useState(false)
+    const [showPassword, setPasswordVisibility] = useState(false);
     const [disabled, setDisabled] = useState(true);
 
     const { singIn } = useContext(AuthContext);

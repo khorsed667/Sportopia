@@ -16,7 +16,7 @@ const Motive = () => {
           />
           <div className=" ms-4">
             <div className="collapse collapse-arrow bg-base-200 my-5">
-              <input type="radio" name="my-accordion-2" checked="checked" />
+              <input type="radio" name="my-accordion-2" defaultChecked="checked" />
               <div className="collapse-title text-xl font-medium">
                 We have a Unique Brand Identity
               </div>

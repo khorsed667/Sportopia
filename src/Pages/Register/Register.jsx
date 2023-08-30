@@ -19,7 +19,7 @@ const Register = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(()=>{
-                        console.log('User profile Updated Successfully');
+                        // console.log('User profile Updated Successfully');
                         const userInfo = {name:data.name, email:data.email}
                         fetch('https://sportofia-server-khorsed667.vercel.app/user',{
                             method: 'POST',
